@@ -1,6 +1,6 @@
 # Redmine Slack Integration Plugin
 
-For Redmine 2.x.x or Redmine 3.x.x.
+For Redmine 3.x.x.
 
 ### Plugin installation
 
@@ -29,7 +29,7 @@ Try this:
 
 1.  Login redmine used redmine admin account.
 
-2.  Open top menu "Administration" -> "Plugins" -> "Redmine Slack Integration plugin" -> "Configure" page
+2.  Open the top menu "Administration" -> "Plugins" -> "Redmine Slack Integration plugin" -> "Configure" page
 
 3.  Set 'https://slack.com/api/chat.postMessage' into "Slack API URL".
 
@@ -59,7 +59,7 @@ Try this:
 
 1.  Login redmine used yourself accout.
 
-2.  Open top right menu "My account" page.
+2.  Open the top right menu "My account" page.
 
 3.  Switch "Slack Disabled" to "Yes"
 
