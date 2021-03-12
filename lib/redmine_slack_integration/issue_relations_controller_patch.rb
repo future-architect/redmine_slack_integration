@@ -20,7 +20,7 @@ module RedmineSlackIntegration
     module InstanceMethods
 
 ################################################################################
-## Call a action after issue_relation is created
+## Call an action after issue_relation is created
 ################################################################################
       def after_action_create
         return if @relation.nil?
@@ -31,7 +31,7 @@ module RedmineSlackIntegration
       end
 
 ################################################################################
-## Call a action after issue_relation is destroied
+## Call an action after issue_relation is destroyed
 ################################################################################
       def after_action_destroy
         return if @relation.nil?
