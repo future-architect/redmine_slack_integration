@@ -1,3 +1,0 @@
-= redmine_slack_integration
-
-Description goes here
