@@ -1,4 +1,4 @@
-class PopulateCustomFields < ActiveRecord::Migration
+class PopulateCustomFields < ActiveRecord::Migration[4.2]
 
 ################################################################################
 ## Create custom field
