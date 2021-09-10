@@ -25,6 +25,24 @@ Try this:
 
 ### Settings
 
+#### How to set Slack OAuth & Permissions
+
+1.  Open slack URL
+
+https://api.slack.com/apps
+
+2.  Add next scopes into Slack Bot Token Scopes.
+
+*  chat:write
+
+*  chat:write.customize
+
+*  chat:write.public
+
+*  users:read
+
+*  users:read.email
+
 #### Set Slack API URL
 
 1.  Login redmine used redmine admin account.

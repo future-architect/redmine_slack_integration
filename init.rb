@@ -8,7 +8,7 @@ Redmine::Plugin.register :redmine_slack_integration do
   name 'Redmine Slack Integration plugin'
   author 'Komatsu Yuji'
   description 'This is a plugin for Redmine Slack Integration'
-  version '0.1.4'
+  version '0.2.2'
   url 'https://www.future.co.jp/'
   author_url 'https://www.future.co.jp/'
 
