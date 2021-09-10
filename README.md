@@ -1,6 +1,6 @@
 # Redmine Slack Integration Plugin
 
-For Redmine 3.x.x.
+For Redmine 4.x.x.
 
 ### Plugin installation
 
