@@ -49,7 +49,7 @@ https://api.slack.com/apps
 
 2.  Open the top menu "Administration" -> "Plugins" -> "Redmine Slack Integration plugin" -> "Configure" page
 
-3.  Set 'https://slack.com/api/chat.postMessage' into "Slack API URL".
+3.  Set 'https://slack.com/api' into "Slack API URL".
 
 4.  Apply this configure.
 

@@ -220,9 +220,9 @@ private
       slack_disabled = user.custom_field_value(ucf_slack)
 
       return false if slack_disabled.nil?
-      return false if slack_disabled == '0'
+      return true if slack_disabled == '1'
 
-      return true
+      return false
     end
 
 ################################################################################
@@ -240,9 +240,9 @@ private
       slack_disabled = project.custom_field_value(pcf_slack)
 
       return false if slack_disabled.nil?
-      return false if slack_disabled == '0'
+      return true if slack_disabled == '1'
 
-      return true
+      return false
     end
 
 ################################################################################
