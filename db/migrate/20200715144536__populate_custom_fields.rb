@@ -11,10 +11,10 @@ class PopulateCustomFields < ActiveRecord::Migration[4.2]
       ProjectCustomField.create(name: 'Slack Channel', field_format: 'string', visible: 0, default_value: '')
     end
     if ProjectCustomField.find_by_name('Slack Disabled').nil?
-      ProjectCustomField.create(name: 'Slack Disabled', field_format: 'bool', visible: 0, default_value: 0, is_required: 1)
+      ProjectCustomField.create(name: 'Slack Disabled', field_format: 'bool', visible: 0, default_value: 0, is_required: 0, edit_tag_style: 'check_box')
     end
     if UserCustomField.find_by_name('Slack Disabled').nil?
-      UserCustomField.create(name: 'Slack Disabled', field_format: 'bool', visible: 0, default_value: 0, is_required: 1)
+      UserCustomField.create(name: 'Slack Disabled', field_format: 'bool', visible: 0, default_value: 0, is_required: 0, edit_tag_style: 'check_box')
     end
     if IssueCustomField.find_by_name('SLACK_THREAD_TS').nil?
       icf = IssueCustomField.create(name: 'SLACK_THREAD_TS', field_format: 'string', default_value: '', is_for_all: 1)
