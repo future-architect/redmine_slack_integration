@@ -4,85 +4,101 @@ For Redmine 4.x.x.
 
 ### Plugin installation
 
-1.  Copy the plugin directory into the $REDMINE_ROOT/plugins directory. Please
-    note that plugin's folder name should be "redmine_slack_integration".
+1.  Copy the plugin directory into the `$REDMINE_ROOT/plugins` directory. Please
+    note that plugin's folder name should be `redmine_slack_integration`.
+    
+```sh
+git clone git@github.com:future-architect/redmine_slack_integration.git redmine_slack_integration
+```
 
-2.  Install 'httpclient'
+2.  Install gem dependencies.
 
-    e.g. bundle install
+```sh
+bundle install
+```
 
-3.  Do migration task.
+3.  Run migration task.
 
-    e.g. RAILS_ENV=production rake redmine:plugins:migrate
+```sh
+RAILS_ENV=production rake redmine:plugins:migrate
+```
 
 4.  (Re)Start Redmine.
-
-### Uninstall
-
-Try this:
-
-*  RAILS_ENV=production rake db:migrate_plugins NAME=redmine_slack_integration VERSION=0
 
 ### Settings
 
 #### How to set Slack OAuth & Permissions
 
-1.  Open slack URL
+1.  Open [Your Apps - Slack API](https://api.slack.com/apps/new) from the following URL and create an app via "From scratch".
 
-https://api.slack.com/apps
+2.  Open "Add features and functionality" -> "Permissions" -> "Scopes" and add the following oauth scopes to "Slack Bot Token Scopes".
 
-2.  Add next scopes into Slack Bot Token Scopes.
+    *  `chat:write`
 
-*  chat:write
+    *  `chat:write.customize`
 
-*  chat:write.customize
+    *  `chat:write.public`
 
-*  chat:write.public
+    *  `users:read`
 
-*  users:read
-
-*  users:read.email
+    *  `users:read.email`
 
 #### Set Slack API URL
 
-1.  Login redmine used redmine admin account.
+1.  Log in to redmine with a redmine admin account.
 
-2.  Open the top menu "Administration" -> "Plugins" -> "Redmine Slack Integration plugin" -> "Configure" page
+2.  Go to "Administration" in the top menu -> "Plugins" -> "Redmine Slack Integration plugin" -> "Configuration" page.
 
-3.  Set 'https://slack.com/api' into "Slack API URL".
+3.  Set `https://slack.com/api` into "Slack API URL" field.
 
-4.  Apply this configure.
+4.  Save this configuration.
 
-#### Set SLack Token and SLack Channel project
+#### Set Slack Token and Slack Channel project
 
-1.  Login redmine used the project admin account.
+1.  Log in to redmine with a project admin account.
 
-2.  Open this project "Settings" -> "Information" tag.
+2.  Open this project's "Settings" -> "Project" tab.
 
-3.  Set your Slack APP's token into "SLack Token".
+3.  Set your Slack App's "Bot User OAuth Token" ( starting with `xoxb-` ) to "Slack Token" field.
 
-4.  Set your Slack Channel into "SLack Channel".
+4.  Set your Slack channel name ( starting with `#` ) to "Slack Channel" field.
 
-5.  Save this project settings.
+5.  Switch "Slack Disabled" to "No".
+
+6.  Save this project settings.
+
+#### Enable notification of your account
+
+1.  Log in to redmine with your account.
+
+2.  Open "My account" on the right of top menu.
+
+3.  Switch "Slack Disabled" to "No".
 
 ### Disable specified project
 
-1.  Login redmine used yourself accout.
+1.  Log in to redmine with a project admin account.
 
-2.  Open the project menu "Settings" page.
+2.  Open the project's "Settings" -> "Project" tab.
 
-3.  Switch "Slack Disabled" to "Yes"
+3.  Switch "Slack Disabled" to "Yes".
 
 ### Disable specified accout
 
-1.  Login redmine used yourself accout.
+1.  Log in to redmine with your account.
 
-2.  Open the top right menu "My account" page.
+2.  Open "My account" on the right of top menu.
 
-3.  Switch "Slack Disabled" to "Yes"
+3.  Switch "Slack Disabled" to "Yes".
 
-### How to use
+### When get notification?
 
 1.  Create a new issue, and your chat room will get a message from redmine.
 
 2.  Edit any issue, and your chat room will get a message from redmine.
+
+### Uninstall
+
+```sh
+RAILS_ENV=production rake db:migrate_plugins NAME=redmine_slack_integration VERSION=0
+```
