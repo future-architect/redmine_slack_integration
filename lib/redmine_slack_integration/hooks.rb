@@ -361,7 +361,7 @@ private
       ## lookup by email
       slack_user_id = lookup_by_email(user.mail, token)
 
-      ## use mail accout
+      ## use mail account
       slack_user_id = mail_account if slack_user_id.nil?
 
       ## get user custom value

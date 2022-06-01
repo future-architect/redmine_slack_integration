@@ -83,7 +83,7 @@ RAILS_ENV=production rake redmine:plugins:migrate
 
 3.  Switch "Slack Disabled" to "Yes".
 
-### Disable specified accout
+### Disable specified account
 
 1.  Log in to redmine with your account.
 
